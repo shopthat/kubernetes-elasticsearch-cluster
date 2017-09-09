@@ -45,6 +45,8 @@ spec:
           value: "false"
         - name: NODE_DATA
           value: "false"
+        - name: NETWORK_HOST
+          value: _eth0_
         - name: HTTP_ENABLE
           value: "true"
         - name: "ES_JAVA_OPTS"

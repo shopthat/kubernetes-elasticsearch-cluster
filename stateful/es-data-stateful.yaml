@@ -43,6 +43,8 @@ spec:
           value: "myesdb"
         - name: NODE_MASTER
           value: "false"
+        - name: NETWORK_HOST
+          value: _eth0_
         - name: NODE_INGEST
           value: "false"
         - name: HTTP_ENABLE
@@ -59,10 +61,9 @@ spec:
   volumeClaimTemplates:
   - metadata:
       name: storage
-      annotations:
-        volume.beta.kubernetes.io/storage-class: standard
     spec:
+      storageClassName: io1
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
-          storage: 12Gi
+          storage: 20Gi

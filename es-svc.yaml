@@ -5,6 +5,8 @@ metadata:
   labels:
     component: elasticsearch
     role: client
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: 10.0.0.0/16
 spec:
   selector:
     component: elasticsearch
@@ -13,3 +15,4 @@ spec:
   - name: http
     port: 9200
     protocol: TCP
+  type: LoadBalancer

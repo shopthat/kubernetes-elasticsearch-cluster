@@ -43,6 +43,8 @@ spec:
           value: "myesdb"
         - name: "NUMBER_OF_MASTERS"
           value: "2"
+        - name: NETWORK_HOST
+          value: _eth0_
         - name: NODE_MASTER
           value: "true"
         - name: NODE_INGEST
